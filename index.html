@@ -86,7 +86,57 @@
       <h2>Antrolin für Sie</h2>
       <p>Gönnen Sie Ihren Lieblingsstücken die Pflege, die sie verdienen. Bestellen Sie jetzt Ihre Flasche Antrolin und überzeugen Sie sich selbst.</p>
       <img src="antrolin_product_3d_animation.png" alt="Antrolin Flasche geöffnet" class="cta-image">
-      <a href="#" class="btn primary-btn">In den Warenkorb</a>
+      <!-- Shopify Buy Button code for Antrolin product -->
+      <div id="product-component-1756289623298"></div>
+      <script type="text/javascript">
+        (function() {
+          var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+          if (window.ShopifyBuy) {
+            if (window.ShopifyBuy.UI) {
+              ShopifyBuyInit();
+            } else {
+              loadScript();
+            }
+          } else {
+            loadScript();
+          }
+          function loadScript() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = scriptURL;
+            (document.head || document.body).appendChild(script);
+            script.onload = ShopifyBuyInit;
+          }
+          function ShopifyBuyInit() {
+            var client = ShopifyBuy.buildClient({
+              domain: '6ciira-iw.myshopify.com',
+              storefrontAccessToken: '69246f2aafe96d068649d003b7859c7a',
+            });
+            ShopifyBuy.UI.onReady(client).then(function(ui) {
+              ui.createComponent('product', {
+                id: '9779787858262',
+                node: document.getElementById('product-component-1756289623298'),
+                moneyFormat: 'CHF {{amount}}',
+                options: {
+                  product: {
+                    text: {
+                      button: 'In den Warenkorb'
+                    }
+                  },
+                  cart: {
+                    startOpen: false,
+                    text: {
+                      title: 'Warenkorb',
+                      total: 'Total',
+                      button: 'Zur Kasse'
+                    }
+                  }
+                }
+              });
+            });
+          }
+        })();
+      </script>
     </div>
   </section>
 
