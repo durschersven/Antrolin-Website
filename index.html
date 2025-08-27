@@ -86,10 +86,9 @@
       <h2>Antrolin für Sie</h2>
       <p>Gönnen Sie Ihren Lieblingsstücken die Pflege, die sie verdienen. Bestellen Sie jetzt Ihre Flasche Antrolin und überzeugen Sie sich selbst.</p>
       <img src="antrolin_product_3d_animation.png" alt="Antrolin Flasche geöffnet" class="cta-image">
-      <!-- Shopify Buy Button code for Antrolin product -->
-      <!-- Updated Shopify Buy Button div ID -->
-      <!-- Updated div ID from latest Shopify Buy Button snippet -->
-      <div id="product-component-17562938559542"></div>
+      <!-- Shopify Buy Button code for Antrolin product (updated 2025-08-27) -->
+      <!-- Updated Shopify Buy Button div ID based on latest snippet from Shopify -->
+      <div id="product-component-1756290845679"></div>
       <script type="text/javascript">
         (function() {
           var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
@@ -110,16 +109,16 @@
             script.onload = ShopifyBuyInit;
           }
           function ShopifyBuyInit() {
-            var client = ShopifyBuy.buildClient({
+          var client = ShopifyBuy.buildClient({
               domain: '6ciira-iw.myshopify.com',
-              // Updated storefront access token from latest Buy Button snippet (ensures buy button loads correctly)
-              storefrontAccessToken: '69246f2aafe96d068649d003b7859c7a',
+              // Updated storefront access token from latest Shopify Buy Button snippet (ensures buy button loads correctly)
+              storefrontAccessToken: '69246f2aaf3e96d068649d003b7859c7a',
             });
             ShopifyBuy.UI.onReady(client).then(function (ui) {
               ui.createComponent('product', {
                 id: '9779787858262',
-                // Updated div ID reference to match the new Buy Button container
-                node: document.getElementById('product-component-17562938559542'),
+                // Updated node reference to match the updated Buy Button container
+                node: document.getElementById('product-component-1756290845679'),
                 moneyFormat: 'CHF {{amount}}',
                 options: {
                   product: {
