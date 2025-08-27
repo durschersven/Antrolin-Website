@@ -212,3 +212,34 @@ table th {
 .cart-actions a:hover, .cart-actions button:hover {
   background: #c4162b;
 }
+
+
+
+
+
+
+
+/* 3D product showcase styles */
+.product-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  margin: 40px 0;
+  opacity: 0;
+  transform: translateY(40px) rotateY(-60deg);
+  transition: transform 1s ease, opacity 1s ease;
+}
+.product-showcase.in-view {
+  opacity: 1;
+  transform: translateY(0) rotateY(0deg);
+}
+.product-showcase img {
+  width: 200px;
+  height: auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  margin-right: 30px;
+}
+.product-showcase .product-info {
+  max-width: 400px;
+}
