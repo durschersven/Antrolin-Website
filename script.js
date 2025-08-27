@@ -47,8 +47,23 @@ function checkout() {
 // Automatically load cart on cart page
 if (document.addEventListener) {
   document.addEventListener('DOMContentLoaded', () => {
+    // If on cart page, populate cart table
     if (document.getElementById('cart-page')) {
       loadCart();
     }
+    // IntersectionObserver for scroll animations
+    const observerOptions = {
+      threshold: 0.15
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, observerOptions);
+    document.querySelectorAll('.scroll-animate').forEach(elem => {
+      observer.observe(elem);
+    });
   });
 }
