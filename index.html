@@ -3,63 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Antrolin – Das Polier‑Wunder</title>
+  <title>Antrolin – Das Polier‑Wunder</title>
+  <!-- Stylesheet for the site -->
   <link rel="stylesheet" href="style.css">
+  <!-- Script that triggers scroll animations -->
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <nav>
+  <!-- Fixed navigation similar to Apple product pages -->
+  <header class="site-header">
+    <nav class="container">
       <div class="logo"><strong>Antrolin</strong></div>
-      <ul>
-        <li><a href="index.html">Start</a></li>
-        <li><a href="produkt.html">Produkt</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about-us.html">Über&nbsp;Uns</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-        <li><a href="cart.html">Warenkorb</a></li>
+      <ul class="nav-list">
+        <li><a href="#hero">Start</a></li>
+        <li><a href="#features">Merkmale</a></li>
+        <li><a href="#home">Für Zuhause</a></li>
+        <li><a href="#workshop">Werkstatt</a></li>
+        <li><a href="#buy">Kaufen</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero parallax scroll-animate">
-    <h1>Antrolin – Das Polier‑Wunder</h1>
-    <p>Reinigt und poliert Holz, Metall, Kunststoff, Chrom, Glas und vieles mehr.</p>
-    <button class="cta" onclick="location.href='shop.html'">Jetzt&nbsp;kaufen</button>
+  <!-- Hero section with a dark backdrop and parallax product image -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content container scroll-animate">
+      <h1>Antrolin&nbsp;– Das Polier‑Wunder</h1>
+      <p>Ein Mittel für alles: reinigt, pflegt und poliert nahezu alle Oberflächen.</p>
+      <a href="#buy" class="btn primary-btn">Jetzt kaufen</a>
+    </div>
+    <div class="hero-image">
+      <!-- Product image floats on the dark background to simulate depth -->
+      <img src="images/antrolin_product_site_front_right.png" alt="Antrolin Produkt" class="scroll-animate">
+    </div>
   </section>
 
-  <section class="section scroll-animate">
-    <h2>Warum Antrolin?</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>Vielseitig & kraftvoll</h3>
-        <p>Ein Mittel für alle Oberflächen – von Möbeln bis zu Autoteilen.</p>
+  <!-- Product features section with front/back bottle on grey background -->
+  <section id="features" class="features-section section-dark">
+    <div class="container flex-row scroll-animate">
+      <div class="feature-image">
+        <img src="images/antrolin_product_frontandback_grey.png" alt="Antrolin Vorder- und Rückseite">
       </div>
-      <div class="feature">
-        <h3>Nachhaltige Formel</h3>
-        <p>Schonend zum Material, streifenfrei und mit angenehmem Duft.</p>
-      </div>
-      <div class="feature">
-        <h3>Schweizer Qualität</h3>
-        <p>Seit über 40 Jahren vertrauen Kunden auf Antrolin aus der Schweiz.</p>
+      <div class="feature-text">
+        <h2>Unvergleichbare Qualität</h2>
+        <p>Antrolin vereint Reinigung, Pflege und Politur in einem einzigen Produkt. Dank seiner sanften, aber wirkungsvollen Formel eignet es sich für Holz, Metall, Kunststoff, Chrom und mehr.</p>
+        <p>Die einzigartige Rezeptur schützt Oberflächen vor Verschleiß und bringt strahlenden Glanz zurück – ganz ohne Schmieren.</p>
       </div>
     </div>
   </section>
 
-  <section class="section scroll-animate">
-    <h2>Über Antrolin</h2>
-    <p>Antrolin ist das Ergebnis jahrzehntelanger Forschung. Unsere besondere Formel reinigt und poliert nahezu jede Oberfläche und lässt sie in neuem Glanz erstrahlen.</p>
-    <p>Mehr erfahren auf der Seite <a href="about-us.html" style="color: var(--primary-color);">Über Uns</a>.</p>
+  <!-- Home environment section emphasising everyday use -->
+  <section id="home" class="environment-section">
+    <div class="container flex-row reverse scroll-animate">
+      <div class="env-text">
+        <h2>Für ein glänzendes Zuhause</h2>
+        <p>Ob Esstisch, Küchenoberfläche oder Klavier – Antrolin sorgt überall für perfekten Glanz. In Ihrem Zuhause fühlt sich Antrolin genauso wohl wie Sie.</p>
+      </div>
+      <div class="env-image">
+        <img src="images/antrolin_product_frontandback_inhouse.png" alt="Antrolin im Zuhause">
+      </div>
+    </div>
   </section>
 
-  <section class="section scroll-animate">
-    <h2>Kontakt</h2>
-    <p>Haben Sie Fragen? Schreiben Sie uns eine E‑Mail an <a href="mailto:info@antrolin.ch" style="color: var(--primary-color);">info@antrolin.ch</a> oder rufen Sie uns an unter +41 44 123 45 67.</p>
-    <p>Besuchen Sie auch unsere Kontaktseite für ein Formular.</p>
+  <!-- Workshop section emphasising professional use -->
+  <section id="workshop" class="environment-section section-dark">
+    <div class="container flex-row scroll-animate">
+      <div class="env-image">
+        <img src="images/antrolin_product_frontandback_werkstatt.png" alt="Antrolin in der Werkstatt">
+      </div>
+      <div class="env-text">
+        <h2>Perfekt für Werkstatt &amp; Hobby</h2>
+        <p>Professionelle Anwender schätzen Antrolin für seine Vielseitigkeit. Von der Werkbank bis zur Garage – Antrolin entfernt Schmutz, schützt Materialien und lässt Ihre Werkstücke wie neu aussehen.</p>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Antrolin. Alle Rechte vorbehalten.</p>
+  <!-- Final call‑to‑action section with isolated product and purchase button -->
+  <section id="buy" class="cta-section">
+    <div class="container scroll-animate">
+      <h2>Antrolin für Sie</h2>
+      <p>Gönnen Sie Ihren Lieblingsstücken die Pflege, die sie verdienen. Bestellen Sie jetzt Ihre Flasche Antrolin und überzeugen Sie sich selbst.</p>
+      <img src="images/antrolin_product_front_black.png" alt="Antrolin Flasche" class="cta-image">
+      <a href="#" class="btn primary-btn">In den Warenkorb</a>
+    </div>
+  </section>
+
+  <!-- Footer with minimal information -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Antrolin. Alle Rechte vorbehalten.</p>
+    </div>
   </footer>
 </body>
 </html>
