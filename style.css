@@ -86,6 +86,9 @@ html, body {
   flex: 1;
   z-index: 2;
   max-width: 600px;
+  /* etwas stärkere Einrückung auf großen Bildschirmen, damit der Text nicht am linken Rand klebt
+     und im Verhältnis zum Bild weiter ins Zentrum rückt. */
+  margin-left: 8%;
 }
 
 .hero-content h1 {
@@ -225,6 +228,13 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
+  }
+
+  /* Auf Mobilgeräten nur die wichtigsten Navigationspunkte anzeigen:
+     Der erste Eintrag (Start) und der letzte (Kaufen) bleiben sichtbar,
+     alle anderen Links werden ausgeblendet, um die Leiste übersichtlich zu halten. */
+  .nav-list li:not(:first-child):not(:last-child) {
+    display: none;
   }
 
   /* Hero‑Bereich stapelt Text und Bild untereinander und richtet sie zentriert aus */
