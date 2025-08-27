@@ -87,7 +87,8 @@
       <p>Gönnen Sie Ihren Lieblingsstücken die Pflege, die sie verdienen. Bestellen Sie jetzt Ihre Flasche Antrolin und überzeugen Sie sich selbst.</p>
       <img src="antrolin_product_3d_animation.png" alt="Antrolin Flasche geöffnet" class="cta-image">
       <!-- Shopify Buy Button code for Antrolin product -->
-      <div id="product-component-1756290746124"></div>
+      <!-- Updated Shopify Buy Button div ID -->
+      <div id="product-component-1756292438003"></div>
       <script type="text/javascript">
         (function() {
           var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
@@ -110,12 +111,14 @@
           function ShopifyBuyInit() {
             var client = ShopifyBuy.buildClient({
               domain: '6ciira-iw.myshopify.com',
-              storefrontAccessToken: '69246f2aafe96d068649d003b7859c7a',
+              // Updated storefront access token from latest Buy Button snippet
+              storefrontAccessToken: '69246f2aa9e96d0686d49d003b7859c7a',
             });
             ShopifyBuy.UI.onReady(client).then(function (ui) {
               ui.createComponent('product', {
                 id: '9779787858262',
-                node: document.getElementById('product-component-1756290746124'),
+                // Updated div ID reference to match the new Buy Button container
+                node: document.getElementById('product-component-1756292438003'),
                 moneyFormat: 'CHF {{amount}}',
                 options: {
                   product: {
