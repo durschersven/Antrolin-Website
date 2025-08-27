@@ -88,7 +88,8 @@ html, body {
   max-width: 600px;
   /* etwas stärkere Einrückung auf großen Bildschirmen, damit der Text nicht am linken Rand klebt
      und im Verhältnis zum Bild weiter ins Zentrum rückt. */
-  margin-left: 8%;
+  /* leicht erhöhte Einrückung, damit der Text mittiger wirkt */
+  margin-left: 10%;
 }
 
 .hero-content h1 {
