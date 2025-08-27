@@ -22,11 +22,18 @@ html, body {
 }
 
 /* Container zentriert Inhalt und begrenzt Breite */
+/*
+ * Das Container‑Element zentriert den Inhalt und sorgt für einen harmonischen Rand auf beiden
+ * Seiten. Durch die horizontale Innenabstände (padding) vermeiden wir, dass Text oder
+ * Bilder zu nah am linken oder rechten Rand liegen. Bei kleineren Geräten reduziert sich
+ * der horizontale Abstand automatisch über die Media‑Query weiter unten.
+ */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 0;
+  /* vertikaler Abstand oben/unten, horizontaler Abstand links/rechts */
+  padding: 60px 20px;
 }
 
 /* Navigationsleiste */
@@ -213,6 +220,35 @@ section {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  /* Navigation auf kleinen Bildschirmen umbrechen und zentrieren */
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* Hero‑Bereich stapelt Text und Bild untereinander und richtet sie zentriert aus */
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .hero-content,
+  .hero-image {
+    width: 100%;
+    max-width: none;
+  }
+
+  .hero-image img {
+    width: 70%;
+    max-width: 300px;
+  }
+
+  /* Geringerer horizontaler Innenabstand für Container auf sehr kleinen Bildschirmen */
+  .container {
+    padding: 40px 15px;
+  }
   .hero-content h1 {
     font-size: 2.2rem;
   }
