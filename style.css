@@ -86,10 +86,11 @@ html, body {
   flex: 1;
   z-index: 2;
   max-width: 600px;
-  /* etwas stärkere Einrückung auf großen Bildschirmen, damit der Text nicht am linken Rand klebt
-     und im Verhältnis zum Bild weiter ins Zentrum rückt. */
-  /* leicht erhöhte Einrückung, damit der Text mittiger wirkt */
-  margin-left: 10%;
+  /* stärkere Einrückung auf großen Bildschirmen, damit der Text nicht am linken Rand klebt
+     und im Verhältnis zum Bild weiter ins Zentrum rückt. Durch die Erhöhung der Einrückung
+     auf 15 % erscheint die Headline nicht mehr so nah am linken Rand und harmoniert mit der
+     großen Produktabbildung auf der rechten Seite. */
+  margin-left: 15%;
 }
 
 .hero-content h1 {
@@ -232,9 +233,10 @@ section {
   }
 
   /* Auf Mobilgeräten nur die wichtigsten Navigationspunkte anzeigen:
-     Der erste Eintrag (Start) und der letzte (Kaufen) bleiben sichtbar,
-     alle anderen Links werden ausgeblendet, um die Leiste übersichtlich zu halten. */
-  .nav-list li:not(:first-child):not(:last-child) {
+     Die ersten beiden Einträge (z. B. Start und Merkmale) sowie der letzte Eintrag (Kaufen)
+     bleiben sichtbar. Alle anderen Links werden ausgeblendet, um die Leiste übersichtlich
+     zu halten und unnötige Unterseiten zu verbergen. */
+  .nav-list li:not(:nth-child(1)):not(:nth-child(2)):not(:last-child) {
     display: none;
   }
 
